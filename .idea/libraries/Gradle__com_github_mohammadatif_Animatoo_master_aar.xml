@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.mohammadatif:Animatoo:master@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/69e2e08488b98ccba87693b25b68365a/jetified-Animatoo-master/res" />
+      <root url="file://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/69e2e08488b98ccba87693b25b68365a/jetified-Animatoo-master/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/69e2e08488b98ccba87693b25b68365a/jetified-Animatoo-master/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../WeatherApp-master/caches/modules-2/files-2.1/com.github.mohammadatif/Animatoo/master/d18363581728bbebb84faf8ff1a6254104bc1410/Animatoo-master-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

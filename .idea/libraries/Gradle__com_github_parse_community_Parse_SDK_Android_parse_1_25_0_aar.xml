@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.parse-community.Parse-SDK-Android:parse:1.25.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/3ebb1b539f2911dfa6aa83cff0ffa03e/jetified-parse-1.25.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/3ebb1b539f2911dfa6aa83cff0ffa03e/jetified-parse-1.25.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../WeatherApp-master/caches/modules-2/files-2.1/com.github.parse-community.Parse-SDK-Android/parse/1.25.0/1437f749963f10156c03286f29f10b1cbebf2710/parse-1.25.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../WeatherApp-master/caches/modules-2/files-2.1/com.github.parse-community.Parse-SDK-Android/parse/1.25.0/c643850a07de4cf4bdbe1313481fd7ad262f562c/parse-1.25.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
