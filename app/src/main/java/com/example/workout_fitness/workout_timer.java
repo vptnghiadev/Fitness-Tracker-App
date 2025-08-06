@@ -119,7 +119,7 @@ public class workout_timer extends FragmentActivity {
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.start();
             running = true;
-            start_stop.setText("Stop");
+            start_stop.setText("DỪNG LẠI");
             start_stop.setBackgroundTintList(getResources().getColorStateList(R.color.pastelred));
             started = true;
             startTime = new Date();
@@ -129,7 +129,7 @@ public class workout_timer extends FragmentActivity {
             chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
             chronometer.start();
             running = true;
-            start_stop.setText("Stop");
+            start_stop.setText("DỪNG LẠI");
             start_stop.setBackgroundTintList(getResources().getColorStateList(R.color.pastelred));
         }else if(running){  //stops the timer
             chronometer.stop();
@@ -138,7 +138,7 @@ public class workout_timer extends FragmentActivity {
             long elapsedMili = SystemClock.elapsedRealtime()
                     - chronometer.getBase();
             currentTime = Math.round(elapsedMili/1000);
-            start_stop.setText("start");
+            start_stop.setText("BẮT ĐẦU");
             start_stop.setBackgroundTintList(getResources().getColorStateList(R.color.pastelgreen));
 
         }
@@ -170,7 +170,7 @@ public class workout_timer extends FragmentActivity {
         }
 
         if(seconds == 0){
-            Toast.makeText(this, "Workout Not Started!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bài tập chưa bắt đầu", Toast.LENGTH_SHORT).show();
             return;
         }
 

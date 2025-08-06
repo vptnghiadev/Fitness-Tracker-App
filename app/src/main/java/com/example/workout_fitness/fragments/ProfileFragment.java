@@ -89,7 +89,7 @@ public class ProfileFragment extends Fragment {
             }
 
             if (!password1.equals(password2)) {
-                tvPassword2.setError("Passwords do not match");
+                tvPassword2.setError("Mật khẩu không khớp");
                 return;
             }
 
@@ -109,7 +109,7 @@ public class ProfileFragment extends Fragment {
                 currentUser.put("height", heightVal);
                 currentUser.put("weight", weightVal);
             } catch (NumberFormatException e) {
-                Toast.makeText(getContext(), "Height and weight must be numeric", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Chiều cao và cân nặng phải là số", Toast.LENGTH_SHORT).show();
                 return;
             }
 

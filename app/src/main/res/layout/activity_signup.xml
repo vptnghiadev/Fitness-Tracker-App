@@ -22,7 +22,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="17dp"
             android:fontFamily="@font/montserrat"
-            android:text="Sign Up Page"
+            android:text="Trang đăng ký"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -55,7 +55,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
-            android:hint="First Name"
+            android:hint="Họ"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
 
@@ -78,7 +78,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Last Name"
+            android:hint="Tên"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
     </RelativeLayout>
@@ -99,7 +99,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Email Address"
+            android:hint="Email"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
 
@@ -121,7 +121,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Weight"
+            android:hint="Cân nặng"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
     </RelativeLayout>
@@ -142,7 +142,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Height"
+            android:hint="Chiều cao"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
     </RelativeLayout>
@@ -163,7 +163,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Age"
+            android:hint="Tuổi"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
     </RelativeLayout>
@@ -185,7 +185,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Username"
+            android:hint="Tên người dùng"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp" />
     </RelativeLayout>
@@ -206,7 +206,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/cardview_default_radius"
             android:background="@android:color/transparent"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:outlineAmbientShadowColor="@color/black"
             android:paddingLeft="17dp"
             android:inputType="textPassword"/>
@@ -227,7 +227,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/blue_fill__rounded_color"
-            android:text="Submit" />
+            android:text="Đăng ký" />
 
         <ImageButton
             android:id="@+id/back"

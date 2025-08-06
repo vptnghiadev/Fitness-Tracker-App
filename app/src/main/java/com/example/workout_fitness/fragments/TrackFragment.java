@@ -73,7 +73,7 @@ public class TrackFragment extends Fragment {
                     startActivity(i);
                     Animatoo.animateSlideLeft(getContext());
                 }else {
-                    Toast.makeText(getContext(), "No workout selected!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa có bài tập nào được lựa chọn!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -94,10 +94,10 @@ public class TrackFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         workouts = new ArrayList<>();
-        workouts.add("General");
-        workouts.add("Strength Training");
-        workouts.add("Run");
-        workouts.add("Walk");
+        workouts.add("Tổng quát");
+        workouts.add("Rèn luyện sức mạnh");
+        workouts.add("Chạy");
+        workouts.add("Đi bộ");
         workouts.add("Yoga");
 
 

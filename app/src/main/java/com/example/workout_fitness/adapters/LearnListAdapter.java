@@ -54,24 +54,6 @@ public class LearnListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
             tvTitle.setText(getTitle);
 
-//            rvContainer.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Intent i = new Intent(itemView.getContext(), TutorialPlayback.class);
-//                    i.putExtra("videoYT", Parcels.wrap(videoYT));
-//                    Pair<View, String> ImageVideo = Pair.create((View) imageView, "ImageVideoName");
-//                    Pair<View, String> Title = Pair.create((View) tvTitle, "tvTitleName");
-//                    Pair<View, String> Description = Pair.create((View) tvTitle, "tvDescriptionName");
-//                    ActivityOptionsCompat options = ActivityOptionsCompat.
-//                            makeSceneTransitionAnimation((Activity) itemView.getContext(), ImageVideo, Title, Description);
-//
-//                    //i.putExtra("title", videoYT.getSnippet().getTitle());
-//                    //i.putExtra("description", videoYT.getSnippet().getDescription());
-//                    //i.putExtra("video_url", videoYT.getId().getVideoId());
-//                    itemView.getContext().startActivity(i, options.toBundle());
-//                }
-//            });
-
             tvTitle.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {

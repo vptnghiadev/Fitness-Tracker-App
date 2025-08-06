@@ -100,7 +100,7 @@ public class HomeFragment extends Fragment {
         } else {
             // show the signup or login screen
         }
-        this.tvUserName.setText("Hello " + (currentUser.getUsername()));
+        this.tvUserName.setText("Xìn chào " + (currentUser.getUsername()));
         this.tvDate.setText(DateSummary.getDate());
     }
 
