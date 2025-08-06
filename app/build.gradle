@@ -6,7 +6,7 @@ android {
     compileSdk 28
 
     defaultConfig {
-        applicationId "com.example.fitness_tracker"
+        applicationId "com.example.workout_fitness"
         minSdk 30
         targetSdk 34
         versionCode 1
