@@ -2,8 +2,8 @@
   <library name="Gradle: androidx.navigation:navigation-runtime:2.1.0@aar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/e0ab6fabe9658a23fef71ae879315026/navigation-runtime-2.1.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/e0ab6fabe9658a23fef71ae879315026/navigation-runtime-2.1.0/res" />
       <root url="file://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/e0ab6fabe9658a23fef71ae879315026/navigation-runtime-2.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../WeatherApp-master/caches/transforms-2/files-2.1/e0ab6fabe9658a23fef71ae879315026/navigation-runtime-2.1.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

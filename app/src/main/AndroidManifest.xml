@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.csueb.codepath.fitness_tracker" >
+    package="com.example.workout_fitness" >
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
@@ -16,7 +16,7 @@
         </intent>
     </queries>
     <application
-        android:name="edu.csueb.codepath.fitness_tracker.ParseApplication"
+        android:name="com.example.workout_fitness.ParseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -25,23 +25,23 @@
         android:theme="@style/Theme.Fitness_Tracker" >
 
         <activity
-            android:name="edu.csueb.codepath.fitness_tracker.workout_summary"
+            android:name="com.example.workout_fitness.workout_summary"
             android:label="@string/title_activity_workout_summary" >
         </activity>
-        <activity android:name="edu.csueb.codepath.fitness_tracker.ProfileEdit" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.TutorialPlayback" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.fragments.rvLearnFragmentNotFrag" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.SignupActivity" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.LoginActivity" android:exported="true">
+        <activity android:name="com.example.workout_fitness.ProfileEdit" />
+        <activity android:name="com.example.workout_fitness.TutorialPlayback" />
+        <activity android:name="com.example.workout_fitness.fragments.rvLearnFragmentNotFrag" />
+        <activity android:name="com.example.workout_fitness.SignupActivity" />
+        <activity android:name="com.example.workout_fitness.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.csueb.codepath.fitness_tracker.DetectorActivity" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.FoodActivity" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.MainActivity" />
-        <activity android:name="edu.csueb.codepath.fitness_tracker.workout_timer" />
+        <activity android:name="com.example.workout_fitness.DetectorActivity" />
+        <activity android:name="com.example.workout_fitness.FoodActivity" />
+        <activity android:name="com.example.workout_fitness.MainActivity" />
+        <activity android:name="com.example.workout_fitness.workout_timer" />
 
     </application>
 
