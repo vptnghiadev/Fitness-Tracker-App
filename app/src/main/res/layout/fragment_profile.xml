@@ -39,29 +39,13 @@
             android:hint="Tên" />
 
         <!-- Username -->
-        <TextView
-            android:id="@+id/textViewUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/etName"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Tên người dùng" />
-        <EditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewUsername"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginTop="4dp"
-            android:hint="Tên người dùng" />
 
         <!-- Email -->
         <TextView
             android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/etUsername"
+            android:layout_below="@id/etName"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/montserrat"
             android:text="Email" />
@@ -149,6 +133,24 @@
             android:fontFamily="@font/montserrat"
             android:hint="e.g., 60kg" />
 
+        <!-- Age -->
+        <TextView
+            android:id="@+id/textViewAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etWeight"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Tuổi" />
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewAge"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="e.g., 18" />
+
         <!-- Logout Button -->
 
         <ImageButton
@@ -157,8 +159,8 @@
             android:layout_height="40dp"
             android:layout_below="@id/etWeight"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="-787dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginTop="-617dp"
+            android:layout_marginEnd="38dp"
             android:background="@drawable/blue_bg_small"
             android:contentDescription="Logout"
             android:scaleType="fitCenter"
@@ -168,7 +170,7 @@
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/etWeight"
+            android:layout_below="@id/etAge"
             android:layout_marginTop="20dp"
             android:text="Lưu Thông Tin"
             android:backgroundTint="#6AA3F1"

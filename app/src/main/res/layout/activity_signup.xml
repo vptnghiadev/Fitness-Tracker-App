@@ -44,49 +44,6 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
-
-        <EditText
-            android:id="@+id/etfirstname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:hint="Họ"
-            android:outlineAmbientShadowColor="@color/black"
-            android:paddingLeft="17dp" />
-
-        />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
-
-        <EditText
-            android:id="@+id/etlastname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="@dimen/cardview_default_radius"
-            android:background="@android:color/transparent"
-            android:hint="Tên"
-            android:outlineAmbientShadowColor="@color/black"
-            android:paddingLeft="17dp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/blue_border_rounded_cornwe">
