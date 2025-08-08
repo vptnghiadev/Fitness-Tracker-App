@@ -136,7 +136,7 @@ public class FoodFragment extends Fragment {
         cur += calories;
 
         total.setText(String.valueOf(cur));
-        progressBar_total.setText("Lượng calo hiện tại: " + cur);
+        progressBar_total.setText("Calo: " + cur);
         progressBar.setProgress(cur);
 
         TableRow row = new TableRow(view.getContext());

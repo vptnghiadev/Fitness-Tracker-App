@@ -13,3 +13,4 @@ Pizza: 285
 Sandwich: 340
 Hot dog: 151
 French fries: 365
+

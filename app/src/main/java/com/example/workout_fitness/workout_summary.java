@@ -182,14 +182,13 @@ public class workout_summary extends FragmentActivity {
 
         double time = ((double) finalTime) / ((double) 60);
         //kg --> pounds formula: lb/2.2046
-        double kgConv = ((double) w/2.2046);  //kilogram conversion from weight
+        double kgConv = w;  //kilogram conversion from weight
         //Log.i(TAG, String.valueOf(kgConv));
 
         cal = (time)*((double) MET*3.5*kgConv)/200; //calculates the calories burned
                                                     //this will be using users weight, and MET which will determine
                                                     //the amount of work done during workout
 
-        //Toast.makeText(workout_summary.this, String.valueOf(time), Toast.LENGTH_SHORT).show();
 
         BigDecimal bd = new BigDecimal(cal).setScale(2, RoundingMode.HALF_UP);
         cal = bd.doubleValue();

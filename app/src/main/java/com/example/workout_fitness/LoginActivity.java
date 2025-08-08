@@ -3,6 +3,7 @@ package com.example.workout_fitness;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,9 +16,6 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
-import com.example.workout_fitness.R;
-
-
 public class LoginActivity extends AppCompatActivity {
     public static final String TAG = "LoginActivity";
     private EditText etUsername;
@@ -25,47 +23,57 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private Button btnSignup;
 
-
-//    private EditText etfirstName;
-//    private EditText etlastname;
-//    private EditText etage;
-//    private EditText etEmailAddress;
-//    private EditText etNewWeight;
-//    private EditText etNewHeight;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
 
-        //ParseUser.logOut();
-        if(ParseUser.getCurrentUser() != null){
+        if (ParseUser.getCurrentUser() != null) {
             goMainActivity();
         }
-        
-        etUsername =  findViewById(R.id.etUsername);
-        etPassword =  findViewById(R.id.etPassword1);
-        btnLogin = findViewById(R.id.btnsubmit);
 
+        etUsername = findViewById(R.id.etUsername);
+        etPassword = findViewById(R.id.etPassword1);
+        btnLogin = findViewById(R.id.btnsubmit);
         btnSignup = findViewById(R.id.btnSignup);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(TAG,"onClick Login button clicked");
-                String username = etUsername.getText().toString();
-                String password = etPassword.getText().toString();
+                Log.i(TAG, "onClick Login button clicked");
+                String username = etUsername.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
+
+                // Kiểm tra bỏ trống email
+
+                if (username.isEmpty() && password.isEmpty() ) {
+                    Toast.makeText(LoginActivity.this, "Vui lòng nhập email và mật khẩu", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if (username.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Vui lòng nhập email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if (!isValidEmail(username)) {
+                    Toast.makeText(LoginActivity.this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if (password.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Vui lòng nhập mật khẩu", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+
                 loginUser(username, password);
             }
         });
 
         btnSignup.setOnClickListener(view -> {
-            //Toast.makeText(LoginActivity.this,"Sign up button clicked", Toast.LENGTH_SHORT).show();
             goSignupActivity();
             Animatoo.animateSwipeLeft(this);
         });
-        
     }
 
     private void loginUser(String username, String password) {
@@ -77,21 +85,22 @@ public class LoginActivity extends AppCompatActivity {
                     Log.e(TAG, "Issue with login", e);
 
                     if (e.getCode() == ParseException.OBJECT_NOT_FOUND) {
-                        // Hiển thị thông báo trên màn hình khi sai mật khẩu
-                        Toast.makeText(LoginActivity.this, "Bạn đã nhập sai mật khẩu", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(LoginActivity.this, "Đăng nhập thất bại: " + e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                     return;
                 }
 
-                // Đăng nhập thành công
                 Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                 goMainActivity();
             }
         });
     }
 
+    private boolean isValidEmail(String email) {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
 
     private void goMainActivity() {
         Intent i = new Intent(LoginActivity.this, MainActivity.class);
@@ -99,11 +108,9 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
-    private void goSignupActivity(){
+    private void goSignupActivity() {
         Intent i = new Intent(LoginActivity.this, SignupActivity.class);
         startActivity(i);
         finish();
     }
-
-
 }

@@ -44,8 +44,8 @@ public class SignupActivity extends AppCompatActivity {
 
         // Khởi tạo view
         back = findViewById(R.id.back);
-        firstName = findViewById(R.id.etfirstname);
-        lastName = findViewById(R.id.etlastname);
+        //firstName = findViewById(R.id.etfirstname);
+        //lastName = findViewById(R.id.etlastname);
         emailAddress = findViewById(R.id.etEmailAddress);
         weight = findViewById(R.id.etWeight);
         height = findViewById(R.id.etHeight);
@@ -59,8 +59,8 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Lấy dữ liệu người dùng nhập
-                String firstNameStr = firstName.getText().toString().trim();
-                String lastNameStr = lastName.getText().toString().trim();
+                //String firstNameStr = firstName.getText().toString().trim();
+                //String lastNameStr = lastName.getText().toString().trim();
                 String emailStr = emailAddress.getText().toString().trim();
                 String heightStr = height.getText().toString().trim();
                 String weightStr = weight.getText().toString().trim();
@@ -69,54 +69,59 @@ public class SignupActivity extends AppCompatActivity {
                 String passwordStr = password.getText().toString().trim();
 
                 // Kiểm tra dữ liệu rỗng
-                if (firstNameStr.isEmpty()) {
-                    firstName.setError("Vui lòng nhập họ");
-                    return;
-                }
-                if (lastNameStr.isEmpty()) {
-                    lastName.setError("Vui lòng nhập tên");
-                    return;
-                }
                 if (emailStr.isEmpty()) {
                     emailAddress.setError("Vui lòng nhập email");
+                    emailAddress.requestFocus();
                     return;
                 }
-                if (!Patterns.EMAIL_ADDRESS.matcher(emailStr).matches()) {
+                else if (!Patterns.EMAIL_ADDRESS.matcher(emailStr).matches()) {
                     emailAddress.setError("Email không hợp lệ");
+                    emailAddress.requestFocus();
                     return;
                 }
-                if (heightStr.isEmpty()) {
-                    height.setError("Vui lòng nhập chiều cao");
-                    return;
-                }
-                if (!heightStr.matches("\\d+")) {
-                    height.setError("Chiều cao phải là số");
-                    return;
-                }
-
-                if (weightStr.isEmpty()) {
+                else if (weightStr.isEmpty()) {
                     weight.setError("Vui lòng nhập cân nặng");
+                    weight.requestFocus();
                     return;
                 }
-                if (!weightStr.matches("\\d+")) {
+                else if (!weightStr.matches("\\d+")) {
                     weight.setError("Cân nặng phải là số");
+                    weight.requestFocus();
                     return;
                 }
-
-                if (ageStr.isEmpty()) {
+                else if (heightStr.isEmpty()) {
+                    height.setError("Vui lòng nhập chiều cao");
+                    height.requestFocus();
+                    return;
+                }
+                else if (!heightStr.matches("\\d+")) {
+                    height.setError("Chiều cao phải là số");
+                    height.requestFocus();
+                    return;
+                }
+                else if (ageStr.isEmpty()) {
                     age.setError("Vui lòng nhập tuổi");
+                    age.requestFocus();
                     return;
                 }
-                if (!ageStr.matches("\\d+")) {
+                else if (!ageStr.matches("\\d+")) {
                     age.setError("Tuổi phải là số");
+                    age.requestFocus();
                     return;
                 }
-                if (usernameStr.isEmpty()) {
+                else if (Integer.parseInt(ageStr) <= 0) {
+                    age.setError("Tuổi phải lớn hơn 0");
+                    age.requestFocus();
+                    return;
+                }
+                else if (usernameStr.isEmpty()) {
                     username.setError("Vui lòng nhập tên người dùng");
+                    username.requestFocus();
                     return;
                 }
-                if (passwordStr.isEmpty()) {
+                else if (passwordStr.isEmpty()) {
                     password.setError("Vui lòng nhập mật khẩu");
+                    password.requestFocus();
                     return;
                 }
 
@@ -137,8 +142,8 @@ public class SignupActivity extends AppCompatActivity {
                         user.setPassword(passwordStr);
                         user.setUsername(usernameStr);
                         user.setEmail(emailStr);
-                        user.put("firstname", firstNameStr);
-                        user.put("lastname", lastNameStr);
+                        //user.put("firstname", firstNameStr);
+                        //user.put("lastname", lastNameStr);
                         user.put("height", Integer.parseInt(heightStr));
                         user.put("weight", Integer.parseInt(weightStr));
                         user.put("age", Integer.parseInt(ageStr));

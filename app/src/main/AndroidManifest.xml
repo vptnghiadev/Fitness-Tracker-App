@@ -28,8 +28,7 @@
             android:name="com.example.workout_fitness.workout_summary"
             android:label="@string/title_activity_workout_summary" >
         </activity>
-        <activity android:name="com.example.workout_fitness.ProfileEdit" />
-        <activity android:name="com.example.workout_fitness.TutorialPlayback" />
+
         <activity android:name="com.example.workout_fitness.fragments.rvLearnFragmentNotFrag" />
         <activity android:name="com.example.workout_fitness.SignupActivity" />
         <activity android:name="com.example.workout_fitness.LoginActivity" android:exported="true">
